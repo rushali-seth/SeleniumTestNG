@@ -50,13 +50,7 @@ public class Utility {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeout));
         return driver;
     }
-
-    public static void acceptAlert(){
-
-    }
-
-
-
+    
 
 
 

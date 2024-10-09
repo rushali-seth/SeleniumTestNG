@@ -29,7 +29,7 @@ public class BasePage {
            wait.until(ExpectedConditions.invisibilityOfAllElements(overlays));
        }
        else{
-           System.out.println("OVERLAYS INVISIBLE");
+           
        }
 
 

@@ -30,7 +30,6 @@ public class BasePage {
        }
        else{
            System.out.println("OVERLAYS INVISIBLE");
-           System.out.println("OVERLAYS INVISIBLE");
        }
 
 

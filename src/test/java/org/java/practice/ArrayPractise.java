@@ -154,6 +154,7 @@ public class ArrayPractise {
            removeSpacesFromString("this is a java programming lan");
            wordsInString("this is a java programming lan");
            printFirstLetter("here is my name as rushali");
+           printFirstLetter("here is my name as rushali");
 
     }
 }

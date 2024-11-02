@@ -5,21 +5,22 @@ import java.util.*;
 public class ArrayPractise {
 
     public static boolean isAnagram(String a, String b){
-      String str1 =  a.replaceAll("//s", "");
-      String str2 =  b.replaceAll("//s", "");
 
-      if(str1.length() != str2.length()){
-          return false;
-      }
-      else{
-         char[] c1 = str1.toLowerCase().toCharArray();
-         char[] c2 = str2.toLowerCase().toCharArray();
+        String s = a.replaceAll("\\s", "");
+        String r = b.replaceAll("\\s","");
 
-         Arrays.sort(c1); Arrays.sort(c2);
+        if(s.length() != r.length()){
+            return false;
+        }
+        else {
+            char[] c = s.toCharArray();
+            char[] d = r.toCharArray();
+            Arrays.sort(c);
+            Arrays.sort(d);
+            return Arrays.equals(c,d);
 
-       return Arrays.equals(c1, c2);
+        }
 
-      }
     }
 
     public static void elementFrequencyInArray(int[] arr){
@@ -65,8 +66,8 @@ public class ArrayPractise {
     public static void smallestElementInArray(int[] arr){
         int min = arr[0];
         for(int i=1; i<arr.length; i++){
-            if(arr[0]<min){
-                min = arr[0];
+            if(arr[i]<min){
+                min = arr[i];
             }
         }
         System.out.println("smallest element : " + min);
@@ -134,7 +135,31 @@ public class ArrayPractise {
         }
     }
 
+    public static void frequencyOfEachElement(int[] arr){
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        for(int i=0;i<arr.length; i++){
+            if(hm.containsKey(arr[i])){
+                hm.put(arr[i], hm.get(arr[i]) + 1);
+            }
+            else{
+                hm.put(arr[i], 1);
+            }
+        }
+        System.out.println(hm);
 
+    }
+
+    public static void printFirstLetterOfEachWordInString(String name){
+        String[] n = name.split(" ");
+        for(int i=0;i<n.length; i++){
+            for(int j=0;j<n[i].length(); j++){
+                System.out.println("First letter of each word : " + n[i].charAt(0));
+                break;
+            }
+        }
+
+
+    }
 
 
     public static void main(String[] args){
@@ -144,17 +169,19 @@ public class ArrayPractise {
   //      printDuplicatesInList(aa);
           reverseArray(aa);
 
-//          int[]  a = {2,3,4,5,6,6,1,60,300,30};
+            int[]  a = {2,3,4,5,6,6,1,60,300,30};
 //          largestElementInArray(a);
 //          smallestElementInArray(a);
 //          printSumArray(a);
 //          sortArrayInAsc(a);
 //          secondLargestElement(a);
 //          printOddEvenNos(a);
-           removeSpacesFromString("this is a java programming lan");
-           wordsInString("this is a java programming lan");
-           printFirstLetter("here is my name as rushali");
-           
+//           removeSpacesFromString("this is a java programming lan");
+//           wordsInString("this is a java programming lan");
+//           printFirstLetter("here is my name as rushali");
+//           frequencyOfEachElement(a);
+//           System.out.println(isAnagram("rider", "drier"));
+           printFirstLetterOfEachWordInString("sudha is a name");
 
     }
 }

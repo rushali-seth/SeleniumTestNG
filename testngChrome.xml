@@ -4,7 +4,8 @@
     <test name="Chrome"   >
         <parameter name = "browser" value = "CHROME"/>
         <classes>
-            <class name="org.tests.FirstTest"  />
+             <class name="org.tests.FirstTest"  />
+
         </classes>
     </test>
 
